@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+i{
+    color: #fff;
+    cursor: pointer;
+}
+
+body{
+    background: linear-gradient(#050505, #18181d);
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    background: linear-gradient(#050505, #18181d);;
+}
+
+.container .sidebar{
+    height: 100vh;
+    background-color: #18181d;
+    padding: 20px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10000;
+    transition: all 0.6s ease;
+}
+
+.container .sidebar .logo{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.container .sidebar .logo > i{
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.container .sidebar .logo a{
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.container .sidebar .logo a:hover,
+.container .sidebar .menu ul li:hover a,
+.container .sidebar .menu ul li:hover i,
+.container main header .nav-links a:hover{
+    color: #c622ce;
+}
+
+.container .sidebar .menu h5{
+    color: #919191;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.container .sidebar .menu ul{
+    list-style: none;
+}
+
+.container .sidebar .menu ul li{
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.container .sidebar .menu ul li a{
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
