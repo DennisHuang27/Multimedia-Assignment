@@ -100,7 +100,6 @@ li {
     margin-bottom: 1.75em;
 }
 
-
 .logo i {
     color: var(--clr-aqua);
     font-size: 50px;
@@ -199,8 +198,14 @@ li {
     width: 100%;
 }
 
+.main-content {
+    display: grid;
+    grid-template-columns: auto 300px;
+}
+
 .song-container {
     margin-top: 2em;
+    margin-right: 1.5em;
     font-size: var(--fs-lg);
     font-family: "Inter", sans-serif;
 }
@@ -211,14 +216,17 @@ li {
 
 .song-item {
     display: grid;
-    grid-template-columns: 25px 50px 200px 150px 50px 50px;
+    grid-template-columns: 25px 50px 200px 150px 50px 100px;
     gap: 3em;
     margin-bottom: 1.75em;
     font-size: var(--fs-md);
     align-items: center;
     justify-items: start;
-    justify-content: start;
 }
+
+/* .song-item > * {
+    background-color: yellow;
+} */
 
 .song-image-container {
     width: 50px;
@@ -245,69 +253,21 @@ li {
 
 .song-play-btn {
     font-size: 35px;
-    margin-left: 1em;
+    justify-self: end;
 }
 
 .song-play-btn i {
     transition: color 250ms ease-in-out;
+    display: flex;
+    justify-content: end;
 }
 
 .song-play-btn i:hover {
     color: var(--clr-aqua);
 }
 
-/*
-
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 6px;
+/* AZIEL EDIT HERE ONLY */
+.song-player {
+    background-color: var(--clr-black);
 }
-
-.logo i{
-    font-size: 24px;
-    transition: all 0.3s ease;
-}
-
-.logo a{
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.container .sidebar .logo a:hover,
-.container .sidebar .menu ul li:hover a,
-.container .sidebar .menu ul li:hover i,
-.container main header .nav-links a:hover{
-    color: #c622ce;
-}
-
-.container .sidebar .menu h5{
-    color: #919191;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-}
-
-.container .sidebar .menu ul{
-    list-style: none;
-}
-
-.container .sidebar .menu ul li{
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    cursor: pointer;
-}
-
-.container .sidebar .menu ul li a{
-    font-size: 20px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.main {
-    background: white;
-}
-
- */
-
+/* AZIEL EDIT HERE ONLY */
