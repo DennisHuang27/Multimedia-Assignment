@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 /* RESET */
 *{
@@ -14,8 +15,9 @@
 
     --fs-sm: 0.75rem;
     --fs-md: 1rem;
-    --fs-lg: 1.5rem;
-    --fs-xl: 1.75rem;
+    --fs-lg: 1.15rem;
+    --fs-xl: 1.35rem;
+    --fs-xxl: 2rem;
 }
 
 /* BASIC STYLES */
@@ -25,22 +27,31 @@ body{
     margin: 0;
     padding: 0;
     background: #0a0a0b;
+    color: white;
 }
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 a {
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+    font: inherit;
+    color: white;
 }
 
 i{
-    color: #fff;
+    color: white;
     cursor: pointer;
     font: inherit;
+}
+
+button {
+    display: block;
+    background: transparent;
+    border: none;
+    outline: none;
 }
 
 input {
@@ -50,30 +61,57 @@ input {
     color: white;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 li {
     list-style: none;
 }
 
 /* GENERAL CLASSES */
 .separator {
-    margin-top: 3em;
     height: 1px;
     background-color: var(--clr-grey);
+    margin-block: 1.5em;
 }
 
 /* CLASS STYLES */
 .container{
     display: grid;
-    grid-template-columns: 250px auto;
-    gap: 0.5em;
+    grid-template-columns: 300px auto;
 }
 
-.sidebar{
+.sidebar {
     height: 100vh;
-    width: auto;
     background-color: var(--clr-black);
     padding: 20px 36px;
     transition: all 0.6s ease;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: var(--fs-xl);
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1.25em;
+    margin-bottom: 1.75em;
+}
+
+
+.logo i {
+    color: var(--clr-aqua);
+    font-size: 50px;
+}
+
+.logo-name {
+    transition: all 250ms ease-in-out;
+}
+
+.logo-name:hover {
+    color: var(--clr-aqua);
 }
 
 .menu {
@@ -84,22 +122,28 @@ li {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    align-items: start;
 }
 
 .menu-list li {
-    font-size: 1.15rem;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 25px;
+    font-size: var(--fs-lg);
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 1em;
 }
 
-.logo i {
-    font-size: 2.5rem;
+.menu-list li i {
+    color: var(--clr-aqua);
+    font-size: 30px;
+}
+
+.menu-list li a {
+    font-weight: bold;
+    transition: color 250ms ease-in-out;
+}
+
+.menu-list li a:hover {
+    font-weight: bold;
     color: var(--clr-aqua);
 }
 
@@ -116,12 +160,19 @@ li {
     gap: 5rem;
 }
 
- .profile-picture {
+.profile-picture {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
     margin-left: auto;
+    margin-right: 30px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+.profile-picture:hover {
+    opacity: 0.75;
 }
 
 .profile-picture img {
@@ -136,15 +187,73 @@ li {
     align-items: center;
     margin: 0.5em;
     background-color: var(--clr-black);
-    padding: 0.5em 1em;
+    padding: 0.25em 0.75em;
     border-radius: 0.5rem;
     flex: 1;
+    font-size: var(--fs-lg);
 }
 
 .search-input {
     margin: 0.5em;
     background: var(--clr-black);
     width: 100%;
+}
+
+.song-container {
+    margin-top: 2em;
+    font-size: var(--fs-lg);
+    font-family: "Inter", sans-serif;
+}
+
+.song-list {
+    padding: 1em;
+}
+
+.song-item {
+    display: grid;
+    grid-template-columns: 25px 50px 200px 150px 50px 50px;
+    gap: 3em;
+    margin-bottom: 1.75em;
+    font-size: var(--fs-md);
+    align-items: center;
+    justify-items: start;
+    justify-content: start;
+}
+
+.song-image-container {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.song-image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.song-author {
+    font-weight: bold;
+}
+
+.song-like-btn {
+    font-size: 35px;
+    margin-left: 30px;
+}
+
+.song-play-btn {
+    font-size: 35px;
+    margin-left: 1em;
+}
+
+.song-play-btn i {
+    transition: color 250ms ease-in-out;
+}
+
+.song-play-btn i:hover {
+    color: var(--clr-aqua);
 }
 
 /*

@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "image": "assets/images/gojo.jpg",
+        "name": "The Call",
+        "author": "Dennis",
+        "length:": "3:15",
+        "src": "assets/songs/living_life_in_the_night.mp3"
+    },
+    {
+        "id": "2",
+        "image": "assets/images/gojo.jpg",
+        "name": "The Call",
+        "author": "Dennis",
+        "length:": "3:15",
+        "src": "assets/songs/living_life_in_the_night.mp3"
+    },
+    {
+        "id": 3,
+        "image": "assets/images/gojo.jpg",
+        "name": "Living life in the night",
+        "author": "Robert",
+        "length:": "3:15",
+        "src": "assets/songs/living_life_in_the_night.mp3"
+    }
+]
